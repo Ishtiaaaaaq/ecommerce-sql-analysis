@@ -1,2 +1,543 @@
-# ecommerce-sql-analysis
-A MySQL-based e-commerce analytics project exploring customers, products, orders, sales, and business insights using SQL.
+# 🛒 E-Commerce Sales & Customer Analytics
+
+A comprehensive **MySQL-based e-commerce analytics project** designed to analyze customers, products, orders, sales, and business performance using SQL.
+
+The project contains **95+ analytical questions**, ranging from basic SQL queries to advanced analysis using **subqueries, CTEs, and window functions**.
+
+---
+
+## 📌 Project Overview
+
+This project simulates an e-commerce business and uses SQL to answer real-world business questions.
+
+The analysis focuses on:
+
+* 👥 Customer behavior
+* 🛍️ Product performance
+* 📦 Order analysis
+* 💰 Sales and revenue
+* 🗂️ Category performance
+* 📈 Business insights
+* 🔎 Advanced SQL analytics
+
+The goal is not only to practice SQL syntax, but to use SQL to solve **realistic business problems and extract meaningful insights from data**.
+
+---
+
+## 🎯 Objectives
+
+* Design and implement a relational e-commerce database.
+* Practice SQL from beginner to advanced level.
+* Analyze customer purchasing behavior.
+* Identify high-performing products and categories.
+* Analyze sales and revenue trends.
+* Use SQL to answer business questions.
+* Build a structured SQL portfolio project for GitHub.
+
+---
+
+## 🛠️ Technologies Used
+
+* **MySQL**
+* **MySQL Workbench**
+* **SQL**
+* Git & GitHub
+
+---
+
+## 🗄️ Database Structure
+
+The database consists of five main tables:
+
+```text
+Customers
+    │
+    │
+    ▼
+Orders ────────────────► Order_Items
+                              │
+                              │
+                              ▼
+                          Products
+                              │
+                              ▼
+                         Categories
+```
+
+### Tables
+
+| Table         | Description                            |
+| ------------- | -------------------------------------- |
+| `Customers`   | Stores customer information            |
+| `Categories`  | Stores product categories              |
+| `Products`    | Stores product details and inventory   |
+| `Orders`      | Stores customer orders                 |
+| `Order_Items` | Stores products included in each order |
+
+---
+
+## 📊 Dataset
+
+The project currently contains:
+
+| Entity      | Records |
+| ----------- | ------: |
+| Customers   |      20 |
+| Categories  |       8 |
+| Products    |      20 |
+| Orders      |      40 |
+| Order Items |      80 |
+
+The dataset contains information covering multiple months of e-commerce activity, allowing sales and time-based analysis.
+
+---
+
+# 📁 Project Structure
+
+```text
+ecommerce-sql-analysis/
+│
+├── README.md
+│
+├── database/
+│   ├── 01_create_database.sql
+│   └── 02_insert_data.sql
+│
+├── analytics/
+│   │
+│   ├── 01_basic_analysis/
+│   │   └── basic_analysis.sql
+│   │
+│   ├── 02_filtering_sorting/
+│   │   └── filtering_sorting.sql
+│   │
+│   ├── 03_aggregate_analysis/
+│   │   └── aggregate_analysis.sql
+│   │
+│   ├── 04_customer_analysis/
+│   │   └── customer_analysis.sql
+│   │
+│   ├── 05_product_analysis/
+│   │   └── product_analysis.sql
+│   │
+│   ├── 06_sales_analysis/
+│   │   └── sales_analysis.sql
+│   │
+│   ├── 07_category_analysis/
+│   │   └── category_analysis.sql
+│   │
+│   ├── 08_order_analysis/
+│   │   └── order_analysis.sql
+│   │
+│   ├── 09_subqueries/
+│   │   └── subqueries.sql
+│   │
+│   ├── 10_cte_analysis/
+│   │   └── cte_analysis.sql
+│   │
+│   ├── 11_window_functions/
+│   │   └── window_functions.sql
+│   │
+│   └── 12_advanced_business_analysis/
+│       └── advanced_analysis.sql
+│
+├── screenshots/
+│
+└── insights/
+    └── business_insights.md
+```
+
+---
+
+# 📚 Analytics Covered
+
+## 1. Basic Analysis
+
+**5 questions**
+
+Covers:
+
+* `SELECT`
+* `DISTINCT`
+* `COUNT()`
+* Basic data exploration
+
+Examples:
+
+* Total number of customers
+* Total number of products
+* Total number of orders
+* List available cities
+* List product categories
+
+---
+
+## 2. Filtering & Sorting
+
+**8 questions**
+
+Covers:
+
+* `WHERE`
+* `AND`
+* `OR`
+* `BETWEEN`
+* `IN`
+* `LIKE`
+* `ORDER BY`
+* `LIMIT`
+
+Examples:
+
+* Products above a certain price
+* Products within a price range
+* Customers from a particular state
+* Products matching a specific name pattern
+* Cheapest and most expensive products
+
+---
+
+## 3. Aggregate Analysis
+
+**8 questions**
+
+Covers:
+
+* `COUNT()`
+* `SUM()`
+* `AVG()`
+* `MIN()`
+* `MAX()`
+* `GROUP BY`
+* `HAVING`
+
+Examples:
+
+* Average product price
+* Total inventory
+* Products per category
+* Customers per state
+* Orders by status
+
+---
+
+## 4. Customer Analysis
+
+**10 questions**
+
+Focuses on customer behavior and purchasing patterns.
+
+Examples:
+
+* Top customers by spending
+* Customers with the most orders
+* Repeat customers
+* Customers with only one order
+* Customers who haven't placed an order
+* Average customer spending
+
+---
+
+## 5. Product Analysis
+
+**10 questions**
+
+Analyzes product performance and inventory.
+
+Examples:
+
+* Best-selling products
+* Highest-revenue products
+* Products with low stock
+* Products never ordered
+* Quantity sold per product
+* Revenue generated by each product
+
+---
+
+## 6. Sales Analysis
+
+**10 questions**
+
+Analyzes business revenue and sales performance.
+
+Examples:
+
+* Total revenue
+* Monthly revenue
+* Average order value
+* Revenue by customer
+* Revenue by category
+* Revenue by product
+* Monthly order volume
+
+---
+
+## 7. Category Analysis
+
+**6 questions**
+
+Analyzes performance across product categories.
+
+Examples:
+
+* Products per category
+* Average category price
+* Inventory per category
+* Revenue per category
+* Quantity sold per category
+* Highest-revenue product in each category
+
+---
+
+## 8. Order Analysis
+
+**7 questions**
+
+Analyzes order behavior and order status.
+
+Examples:
+
+* Orders by status
+* Cancelled orders
+* Cancellation rate
+* Orders per month
+* Average items per order
+* Highest-value orders
+
+---
+
+## 9. Subqueries
+
+**7 questions**
+
+Covers nested SQL queries and comparisons.
+
+Examples:
+
+* Products above average price
+* Customers spending above average
+* Orders above average order value
+* Customers with more orders than average
+* Products selling above average quantity
+
+---
+
+## 10. CTE Analysis
+
+**6 questions**
+
+Uses Common Table Expressions to simplify complex analysis.
+
+```sql
+WITH CustomerSpending AS (
+    ...
+)
+SELECT *
+FROM CustomerSpending;
+```
+
+Examples:
+
+* Customer spending analysis
+* Monthly revenue analysis
+* Product revenue ranking
+* Category revenue analysis
+* Repeat customer analysis
+
+---
+
+## 11. Window Functions
+
+**8 questions**
+
+Advanced SQL analysis using:
+
+* `ROW_NUMBER()`
+* `RANK()`
+* `DENSE_RANK()`
+* `LAG()`
+* `LEAD()`
+* `SUM() OVER()`
+* `PARTITION BY`
+
+Examples:
+
+* Rank customers by spending
+* Rank products by revenue
+* Top products within each category
+* Running revenue
+* Previous month's revenue
+* Revenue contribution percentage
+
+---
+
+## 12. Advanced Business Analysis
+
+**10 questions**
+
+This section focuses on realistic business problems rather than simply demonstrating SQL syntax.
+
+Examples:
+
+* Which customers contribute the most revenue?
+* Which products generate high revenue but low sales volume?
+* Which categories contribute the most to total revenue?
+* Which customers are repeat buyers?
+* What percentage of orders are cancelled?
+* Which month generated the highest revenue?
+* Which products may need restocking?
+* Who are the highest-value customers?
+
+---
+
+# 🧠 SQL Concepts Demonstrated
+
+This project covers SQL concepts from beginner to advanced level.
+
+### Basic
+
+```text
+SELECT
+DISTINCT
+WHERE
+ORDER BY
+LIMIT
+```
+
+### Intermediate
+
+```text
+AND / OR
+IN
+BETWEEN
+LIKE
+GROUP BY
+HAVING
+COUNT()
+SUM()
+AVG()
+MIN()
+MAX()
+```
+
+### Joins
+
+```text
+INNER JOIN
+LEFT JOIN
+Multiple-table JOINs
+```
+
+### Advanced
+
+```text
+Subqueries
+CTEs
+Window Functions
+RANK()
+DENSE_RANK()
+ROW_NUMBER()
+LAG()
+LEAD()
+PARTITION BY
+```
+
+---
+
+# 🚀 How to Run the Project
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/ecommerce-sql-analysis.git
+```
+
+### 2. Open MySQL Workbench
+
+Connect to your MySQL server.
+
+### 3. Create the database
+
+Run:
+
+```text
+database/01_create_database.sql
+```
+
+### 4. Insert the data
+
+Run:
+
+```text
+database/02_insert_data.sql
+```
+
+### 5. Run the analytics
+
+Navigate to:
+
+```text
+analytics/
+```
+
+and execute the SQL files according to the topic you want to explore.
+
+---
+
+# 📈 Business Insights
+
+The `insights/` folder contains important findings obtained from the SQL analysis.
+
+Examples of insights include:
+
+* Highest-revenue products
+* Top customers by spending
+* Best-performing categories
+* Monthly revenue trends
+* Order cancellation patterns
+* Inventory-related observations
+
+---
+
+# 🎓 Learning Outcomes
+
+Through this project, I practiced:
+
+* Relational database design
+* Writing SQL queries
+* Joining multiple tables
+* Data aggregation
+* Customer and product analysis
+* Business-oriented data analysis
+* Subqueries
+* Common Table Expressions
+* Window functions
+* Translating business questions into SQL queries
+* Organizing a SQL project professionally using Git and GitHub
+
+---
+
+# 🔮 Future Improvements
+
+Potential future additions include:
+
+* 📊 Power BI dashboard
+* 📈 Sales visualization
+* 👥 Customer segmentation
+* 📦 Inventory forecasting
+* 🔄 PostgreSQL version
+* 🐍 Python-based analysis
+* 🤖 Automated reporting
+
+---
+
+## 👨‍💻 Author
+
+**Ishtiaq Hussain**
+
+Computer Science Engineering Student
+
+---
+
+⭐ If you find this project useful, feel free to explore the SQL queries and analysis.
