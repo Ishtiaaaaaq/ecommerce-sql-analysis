@@ -12,14 +12,6 @@ SELECT product_name, price
 FROM Products
 WHERE price > 5000;
 
-
--- Q2. Find all products with a price less than ₹1,000
-
-SELECT product_name, price
-FROM Products
-WHERE price < 1000;
-
-
 -- Q3. Find products whose price is between ₹1,000 and ₹5,000
 
 SELECT product_name, price
